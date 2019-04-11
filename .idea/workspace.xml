@@ -29,7 +29,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="41" />
     <option name="y" value="344" />
     <option name="width" value="1400" />
@@ -41,7 +41,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -53,6 +52,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -106,11 +106,12 @@
       <workItem from="1555019234671" duration="30000" />
       <workItem from="1555020204836" duration="403000" />
       <workItem from="1555021278855" duration="730000" />
+      <workItem from="1555022165447" duration="603000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7940000" />
+    <option name="totallyTimeSpent" value="8543000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
