@@ -1,0 +1,50 @@
+{
+  "name": "unsplash-clone",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/classnames": "^2.2.7",
+    "@types/jest": "24.0.11",
+    "@types/node": "11.11.0",
+    "@types/react": "^16.8.7",
+    "@types/react-dom": "16.8.2",
+    "@types/react-redux": "^7.0.3",
+    "@types/react-router": "^4.4.5",
+    "@types/react-router-dom": "^4.3.1",
+    "@types/redux": "^3.6.0",
+    "@types/redux-thunk": "^2.1.0",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "classnames": "^2.2.6",
+    "express": "^4.16.4",
+    "informed": "^2.1.9",
+    "materialize-css": "^1.0.0",
+    "node-sass": "^4.11.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-redux": "^6.0.1",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.8",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "typed-css-modules": "^0.4.2",
+    "typescript": "3.3.3333"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

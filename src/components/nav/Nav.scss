@@ -1,0 +1,47 @@
+@import '../../styles/core';
+
+.page-nav {
+  width: 100%;
+  background-color: get-color(background, accent);
+  padding: 0 15px;
+  height: 60px;
+  display: flex;
+  align-items: stretch;
+  position: fixed;
+  top: 0;
+  &__container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  &__search-form {
+    width: 50%;
+  }
+  &__menu {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__item {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    margin: 0 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+    > * {
+      color: get-color(text, secondary);
+      display: flex;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      &:hover {
+        color: get-color(text, accent)
+      }
+    }
+  }
+}
