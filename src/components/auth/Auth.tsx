@@ -1,10 +1,12 @@
 import * as React from 'react';
 import { RouteChildrenProps } from 'react-router';
 import configs from '../../configs';
+import Helmet from "react-helmet";
 
 export interface AuthProps extends RouteChildrenProps {
   setToken(code: string): void;
   isAuthenticated?: boolean;
+  title?: string;
 }
 
 export class Auth extends React.PureComponent<AuthProps, any> {
@@ -23,8 +25,13 @@ export class Auth extends React.PureComponent<AuthProps, any> {
   }
 
   render() {
-    return <div>
-      <a href={`https://unsplash.com/oauth/authorize?client_id=${configs.clientId}&redirect_uri=${configs.redirectUri}&response_type=${configs.response_type}&scope=${configs.scope}`}>authorize</a>
-    </div>;
+    return <>
+      <Helmet>
+        <title>{this.props.title}</title>
+      </Helmet>
+      <div>
+        <a href={`https://unsplash.com/oauth/authorize?client_id=${configs.clientId}&redirect_uri=${configs.redirectUri}&response_type=${configs.response_type}&scope=${configs.scope}`}>authorize</a>
+      </div>;
+    </>
   }
 }

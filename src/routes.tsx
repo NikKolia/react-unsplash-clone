@@ -9,7 +9,7 @@ export const routes = [
     path: '/',
     exact: true,
     props: {
-      title: 'Test'
+      title: 'Home page of our cool site'
     },
     Component: Grid
   },

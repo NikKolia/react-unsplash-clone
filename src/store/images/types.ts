@@ -4,7 +4,8 @@ import { IAction } from '../../types/action';
 export enum IMAGES_ACTION_TYPES {
   SEARCH_SUCCEED = '@images/search_succeed',
   LOADING = '@images/loading',
-  SEARCH_ERROR = '@images/search_error'
+  SEARCH_ERROR = '@images/search_error',
+  FETCH_PHOTOS= '@images/fetch_photos'
 }
 
 export type ImagesAction = IAction<IMAGES_ACTION_TYPES, {[key: string]: any}>;

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { getImages, getIsLoading } from '../store/images';
+import {getImages, getIsLoading, getPhotos} from '../store/images';
 import { AppState } from '../store';
 import { Grid } from '../components/grid';
 import { Image } from '../types/imagesApi';
@@ -16,6 +16,12 @@ export interface IGridDispatchProps {}
 
 type Props = IGridStateProps & IGridDispatchProps & IGridOwnProps
 
+const dispatchToProps = (dispatch: any) => {
+  return {
+    getPhotos: () => dispatch(getPhotos())
+  }
+};
+
 const mapStateToProps = (state: AppState): Props  => {
   return {
     images: getImages(state),
@@ -23,6 +29,6 @@ const mapStateToProps = (state: AppState): Props  => {
   };
 };
 
-const GridContainer = connect<IGridStateProps, IGridDispatchProps, IGridOwnProps>(mapStateToProps as any)(Grid);
+const GridContainer = connect<IGridStateProps, IGridDispatchProps, IGridOwnProps>(mapStateToProps as any, dispatchToProps as any)(Grid);
 
 export { GridContainer as Grid };

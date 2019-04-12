@@ -23,6 +23,7 @@ export class App extends React.Component<{}, {}> {
             exact={exact}
             render={(routeProps) => {
               console.log(routeProps);
+              // @ts-ignore
               return <Component {...props} {...routeProps}/>;
             }}
           />
