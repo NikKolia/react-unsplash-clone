@@ -7,10 +7,7 @@ import { NavItem } from './components/nav';
 import { routes } from './routes';
 
 export class App extends React.Component<{}, {}> {
-  componentDidMount(): void {
-  }
-
-  public render() {
+   public render() {
     return <div className={'page-container'}>
       <Nav>
         {
