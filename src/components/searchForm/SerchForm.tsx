@@ -14,7 +14,7 @@ interface IState {
     value: string;
 }
 
-export class SearchForm extends React.Component<IProps, IState>{
+export class SearchForm extends React.PureComponent<IProps, IState>{
     public state = {
         value: ''
     };
