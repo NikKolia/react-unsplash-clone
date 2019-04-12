@@ -7,7 +7,7 @@ import Helmet from "react-helmet";
 interface Props {
   images: Array<Image>;
   isLoading: boolean;
-  title?: string
+  title?: string;
   getPhotos(): void;
 }
 
