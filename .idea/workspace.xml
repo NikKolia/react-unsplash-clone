@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d993d103-40a2-498a-b4f3-1e4baf49fcb1" name="Default Changelist" comment="git status">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -52,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="344">
-              <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+              <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -173,12 +173,12 @@
       <workItem from="1555025754987" duration="174000" />
       <workItem from="1555025977533" duration="1002000" />
       <workItem from="1555088094526" duration="2079000" />
-      <workItem from="1555093439476" duration="817000" />
+      <workItem from="1555093439476" duration="2067000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13991000" />
+    <option name="totallyTimeSpent" value="15241000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -191,9 +191,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1618" height="884" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4979253" visible="true" weight="0.21514958" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979253" visible="true" weight="0.21514958" />
       <window_info id="Structure" order="1" sideWeight="0.5020747" side_tool="true" weight="0.21514958" />
       <window_info id="npm" order="2" sideWeight="0.5020747" side_tool="true" weight="0.21514958" />
       <window_info id="Favorites" order="3" sideWeight="0.5020747" side_tool="true" weight="0.21514958" />
@@ -208,7 +207,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49968174" weight="0.32962447" />
       <window_info anchor="bottom" id="TypeScript" order="9" sideWeight="0.49968174" weight="0.32962447" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50541055" side_tool="true" visible="true" weight="0.32962447" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49458945" visible="true" weight="0.32962447" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49458945" visible="true" weight="0.32962447" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -252,7 +251,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
         </state>
       </provider>
     </entry>
