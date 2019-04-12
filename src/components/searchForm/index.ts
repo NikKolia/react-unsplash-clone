@@ -1,1 +1,1 @@
-export * from './searchForm';
+export * from './SearchForm';
