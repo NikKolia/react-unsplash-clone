@@ -16,7 +16,7 @@ export const fetchAuthCode = () => {
   const requestConfig = {
     params: {
       client_id: configs.clientId,
-      redirect_uri: 'http://localhost:3000/auth',
+      redirect_uri: configs.appDomain + configs.redirectUri,
       response_type: 'code',
       scope: 'public+read_user'
     }
@@ -30,7 +30,7 @@ export const fetchToken = async (code: string): Promise<FetchTokenResponse> => {
     params: {
       client_id: configs.clientId,
       client_secret: configs.clientSecret,
-      redirect_uri: 'http://localhost:3000/auth',
+      redirect_uri: configs.appDomain + configs.redirectUri,
       code,
       grant_type: 'authorization_code'
     }

@@ -30,8 +30,8 @@ export class Auth extends React.PureComponent<AuthProps, any> {
         <title>{this.props.title}</title>
       </Helmet>
       <div>
-        <a href={`https://unsplash.com/oauth/authorize?client_id=${configs.clientId}&redirect_uri=${configs.redirectUri}&response_type=${configs.response_type}&scope=${configs.scope}`}>authorize</a>
-      </div>;
+        <a href={`https://unsplash.com/oauth/authorize?client_id=${configs.clientId}&redirect_uri=${configs.appDomain + configs.redirectUri}&response_type=${configs.response_type}&scope=${configs.scope}`}>authorize</a>
+      </div>
     </>
   }
 }

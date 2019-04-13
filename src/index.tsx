@@ -6,6 +6,8 @@ import reduxThunk from 'redux-thunk';
 import rootReducer from './store';
 import { App } from './App';
 
+console.log(process.env, process.env.ENV);
+
 import './index.scss';
 import { BrowserRouter as Router } from 'react-router-dom';
 // @ts-ignore
