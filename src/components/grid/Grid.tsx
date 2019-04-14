@@ -2,6 +2,7 @@ import React from 'react';
 import { Image } from '../../types/imagesApi';
 import { GridItem } from './GridItem';
 import './Grid.scss';
+import '../button/Button.scss';
 import Helmet from "react-helmet";
 
 interface Props {
@@ -28,9 +29,6 @@ export class Grid extends React.PureComponent<Props> {
           <title>{this.props.title}</title>
         </Helmet>
         <div className={'grid'}>
-            <div>Found: { this.props.total } items</div>
-            <div>Pages: { this.props.totalPages }</div>
-            <button>Show more</button>
           <div className='grid__content'>
             {
               images.map(item => {
@@ -44,6 +42,9 @@ export class Grid extends React.PureComponent<Props> {
               })
             }
           </div>
+            <div>Found: { this.props.total } items</div>
+            <div>Pages: { this.props.totalPages }</div>
+            <button className={'btn'}>Show more</button>
         </div>
       </>
   }
