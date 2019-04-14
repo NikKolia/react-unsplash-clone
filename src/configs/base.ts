@@ -1,7 +1,7 @@
 export default {
     baseUrl: 'https://api.unsplash.com',
-    clientId: '588745fe0494eda1c54354b97d7885c5f94a97a359ce835605acf2df6163ba8c',
-    clientSecret: 'a61e2010de217db18110423b0e2defbe52175362520ec217a061226fea832ea0',
+    clientId: '9a6b0e49e1eff14b3a5477975544ed60f3197105c6d6e2c50cb9a300fa712a1d',
+    clientSecret: '5a1243845b45bb9357ae8020206d489169fd55f3be660cbde8655df87a7db651',
     response_type: 'code',
     scope: 'public+read_user',
     redirectUri: '/auth'

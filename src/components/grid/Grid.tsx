@@ -8,6 +8,8 @@ interface Props {
   images: Array<Image>;
   isLoading: boolean;
   title?: string;
+  total: number;
+  totalPages: number;
   getPhotos(): void;
 }
 
@@ -22,24 +24,27 @@ export class Grid extends React.PureComponent<Props> {
       return <h2>loading...</h2>
     }
     return <>
-      <Helmet>
-        <title>{this.props.title}</title>
-      </Helmet>
-      <div className={'grid'}>
-        <div className='grid__content'>
-          {
-            images.map(item => {
-              const {description, urls, likes, id} = item;
-              return <GridItem
-                  className={'grid__item'}
-                  id={id}
-                  description={description}
-                  url={urls.small}
-                  likes={likes}/>;
-            })
-          }
+        <Helmet>
+          <title>{this.props.title}</title>
+        </Helmet>
+        <div className={'grid'}>
+            <div>Found: { this.props.total } items</div>
+            <div>Pages: { this.props.totalPages }</div>
+            <button>Show more</button>
+          <div className='grid__content'>
+            {
+              images.map(item => {
+                const {description, urls, likes, id} = item;
+                return <GridItem
+                    className={'grid__item'}
+                    id={id}
+                    description={description}
+                    url={urls.small}
+                    likes={likes}/>;
+              })
+            }
+          </div>
         </div>
-      </div>
       </>
   }
 }
