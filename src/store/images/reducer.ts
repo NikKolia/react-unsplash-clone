@@ -6,7 +6,8 @@ const INITIAL_STATE = {
   items: [],
   totalPages: 0,
   total: 0,
-  isLoading: false
+  isLoading: false,
+  currentPage: 1
 };
 
 export default (state: ImagesState = INITIAL_STATE, action: ImagesAction) => {
@@ -32,5 +33,9 @@ export const getTotalItems = (state: AppState) => {
 
 export const getTotalPages = (state: AppState) => {
   return state.images.totalPages;
+};
+
+export const getCurrentPage = (state: AppState) => {
+  return state.images.currentPage;
 };
 

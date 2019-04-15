@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { getImages, getIsLoading, getPhotos, getTotalItems, getTotalPages } from '../store/images';
+import { getImages, getIsLoading, getPhotos, getTotalItems, getTotalPages, getCurrentPage } from '../store/images';
 import { AppState } from '../store';
 import { Grid } from '../components/grid';
 import { Image } from '../types/imagesApi';
@@ -12,6 +12,7 @@ export interface IGridStateProps {
   isLoading: boolean;
   total: number;
   totalPages: number;
+  currentPage: number;
 }
 
 export interface IGridDispatchProps {}
@@ -29,7 +30,8 @@ const mapStateToProps = (state: AppState): Props  => {
     images: getImages(state),
     isLoading: getIsLoading(state),
     total: getTotalItems(state),
-    totalPages: getTotalPages(state)
+    totalPages: getTotalPages(state),
+    currentPage: getCurrentPage(state),
   };
 };
 

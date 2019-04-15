@@ -15,5 +15,6 @@ export interface ImagesState {
   items: Array<Image>;
   totalPages: number;
   total: number;
-  isLoading: boolean
+  isLoading: boolean;
+  currentPage: number;
 }

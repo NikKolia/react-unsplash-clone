@@ -2,8 +2,8 @@ import React from 'react';
 import { Image } from '../../types/imagesApi';
 import { GridItem } from './GridItem';
 import './Grid.scss';
-import '../button/Button.scss';
 import Helmet from "react-helmet";
+import {Button} from "../button";
 
 interface Props {
   images: Array<Image>;
@@ -11,6 +11,7 @@ interface Props {
   title?: string;
   total: number;
   totalPages: number;
+  currentPage: number;
   getPhotos(): void;
 }
 
@@ -42,9 +43,10 @@ export class Grid extends React.PureComponent<Props> {
               })
             }
           </div>
-            <div>Found: { this.props.total } items</div>
-            <div>Pages: { this.props.totalPages }</div>
-            <button className={'btn'}>Show more</button>
+          <div>Found items: { this.props.total }</div>
+          <div>Total pages: { this.props.totalPages }</div>
+          <div>Current page: { this.props.currentPage }</div>
+          <Button className={'btn'}>Show next page</Button>
         </div>
       </>
   }
