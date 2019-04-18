@@ -1,6 +1,6 @@
 import { IMAGES_ACTION_TYPES, ImagesAction } from './types';
 import { Dispatch } from 'redux';
-import {fetchPhotos, searchItems} from '../../services';
+import {fetchPhotos, searchItems, loadItems} from '../../services';
 
 const loadingStart = () => (
   {
@@ -48,13 +48,14 @@ export const getPhotos= (): any => async (dispatch: Dispatch<ImagesAction>) =>{
 };
 
 // pagination
-export const pagImages= (): any => async (dispatch: Dispatch<ImagesAction>) =>{
-  dispatch(loadingStart());
-  const response = await fetchPhotos();
+export const pagImages = (payload: {value: string, page: number}): any => {
+  return async (dispatch: Dispatch<ImagesAction>) => {
+    dispatch(loadingStart());
+  const response = await loadItems(payload);
 
   if (response) {
     dispatch(searchSucceed({...response, isLoading: false}));
   } else {
     dispatch(searchError());
   }
-};
+}};

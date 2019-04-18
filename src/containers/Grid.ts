@@ -22,7 +22,7 @@ type Props = IGridStateProps & IGridDispatchProps & IGridOwnProps
 const dispatchToProps = (dispatch: any) => {
   return {
     getPhotos: () => dispatch(getPhotos()),
-    pagImages: () => dispatch(pagImages())
+    pagImages: (value: string) => dispatch(pagImages({value, page: 1}))
   }
 };
 

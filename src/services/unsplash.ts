@@ -34,3 +34,18 @@ export const fetchPhotos = async (): Promise<any>  => {
   const { results: items } = response.data;
   return { totalPages: 0, total: 0, items: response.data }
 };
+
+// pagination
+export const loadItems = async (payload: {value: string, page: number}): Promise<SearchItemsResponse>  => {
+  const currentPage = payload.page + 1;
+  const axiosConfig = {
+    params: {
+      query: payload.value,
+      page: currentPage
+    }
+  };
+  const  apiUrl = '/search/photos';
+  const response = await axios.get<SearchResponse>(apiUrl, axiosConfig);
+  const { total_pages: totalPages, total, results: items } = response.data;
+  return { totalPages, total, items }
+};
