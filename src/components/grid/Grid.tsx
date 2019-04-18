@@ -13,11 +13,13 @@ interface Props {
   totalPages: number;
   currentPage: number;
   getPhotos(): void;
+  pagImages(): void;
 }
 
 export class Grid extends React.PureComponent<Props> {
   componentDidMount(): void {
-    this.props.getPhotos()
+    this.props.getPhotos();
+    this.props.pagImages()
   }
 
   render() {
@@ -46,7 +48,7 @@ export class Grid extends React.PureComponent<Props> {
           <div>Found items: { this.props.total }</div>
           <div>Total pages: { this.props.totalPages }</div>
           <div>Current page: { this.props.currentPage }</div>
-          <Button className={'btn'}>Show next page</Button>
+          <Button className={'btn'} onClick={this.props.pagImages}>Show next page</Button>
         </div>
       </>
   }

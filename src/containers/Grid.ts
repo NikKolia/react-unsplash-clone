@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { getImages, getIsLoading, getPhotos, getTotalItems, getTotalPages, getCurrentPage } from '../store/images';
+import { getImages, getIsLoading, getPhotos, getTotalItems, getTotalPages, getCurrentPage, pagImages } from '../store/images';
 import { AppState } from '../store';
 import { Grid } from '../components/grid';
 import { Image } from '../types/imagesApi';
@@ -21,7 +21,8 @@ type Props = IGridStateProps & IGridDispatchProps & IGridOwnProps
 
 const dispatchToProps = (dispatch: any) => {
   return {
-    getPhotos: () => dispatch(getPhotos())
+    getPhotos: () => dispatch(getPhotos()),
+    pagImages: () => dispatch(pagImages())
   }
 };
 

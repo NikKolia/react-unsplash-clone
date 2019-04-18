@@ -8,6 +8,7 @@ export interface SearchItemsResponse {
   items: Array<Image>
 }
 
+// search
 export const searchItems = async (payload: {value: string, page: number}): Promise<SearchItemsResponse>  => {
   const axiosConfig = {
     params: {
@@ -21,6 +22,7 @@ export const searchItems = async (payload: {value: string, page: number}): Promi
   return { totalPages, total, items }
 };
 
+//booting
 export const fetchPhotos = async (): Promise<any>  => {
   const axiosConfig = {
     params: {
