@@ -6,9 +6,10 @@ export interface SearchItemsResponse {
   totalPages: number;
   total: number;
   items: Array<Image>
+  page: number;
 }
 
-// search
+// search images
 export const searchItems = async (payload: {value: string, page: number}): Promise<SearchItemsResponse>  => {
   const axiosConfig = {
     params: {
@@ -18,11 +19,11 @@ export const searchItems = async (payload: {value: string, page: number}): Promi
   };
   const  apiUrl = '/search/photos';
   const response = await axios.get<SearchResponse>(apiUrl, axiosConfig);
-  const { total_pages: totalPages, total, results: items } = response.data;
-  return { totalPages, total, items }
+  const { total_pages: totalPages, total, results: items, currentPage: page} = response.data;
+  return { totalPages, total, items, page }
 };
 
-//booting
+// main images
 export const fetchPhotos = async (): Promise<any>  => {
   const axiosConfig = {
     params: {
@@ -35,7 +36,7 @@ export const fetchPhotos = async (): Promise<any>  => {
   return { totalPages: 0, total: 0, items: response.data }
 };
 
-// pagination
+// pagination main
 export const loadItems = async (payload: {value: string, page: number}): Promise<SearchItemsResponse>  => {
   const currentPage = payload.page + 1;
   const axiosConfig = {
@@ -46,6 +47,6 @@ export const loadItems = async (payload: {value: string, page: number}): Promise
   };
   const  apiUrl = '/search/photos';
   const response = await axios.get<SearchResponse>(apiUrl, axiosConfig);
-  const { total_pages: totalPages, total, results: items } = response.data;
-  return { totalPages, total, items }
+  const { total_pages: totalPages, total, results: items, currentPage: page } = response.data;
+  return { totalPages, total, items, page }
 };

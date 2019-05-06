@@ -20,7 +20,7 @@ const searchError = () => (
   }
 );
 // Action creator
-// sign in, nav
+// search images sign in, nav
 export const getItems = (payload: {value: string, page: number}): any => {
   return async (dispatch: Dispatch<ImagesAction>) => {
     dispatch(loadingStart());
@@ -35,7 +35,7 @@ export const getItems = (payload: {value: string, page: number}): any => {
   }
 };
 
-// booting images
+// main images
 export const getPhotos= (): any => async (dispatch: Dispatch<ImagesAction>) =>{
   dispatch(loadingStart());
   const response = await fetchPhotos();
@@ -47,7 +47,7 @@ export const getPhotos= (): any => async (dispatch: Dispatch<ImagesAction>) =>{
   }
 };
 
-// pagination
+// main pagination
 export const pagImages = (payload: {value: string, page: number}): any => {
   return async (dispatch: Dispatch<ImagesAction>) => {
     dispatch(loadingStart());

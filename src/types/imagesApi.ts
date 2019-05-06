@@ -51,5 +51,6 @@ export interface Image {
 export interface SearchResponse {
   total: number,
   total_pages: number;
-  results: Array<Image>
+  results: Array<Image>;
+  currentPage: number;
 }
