@@ -2,5 +2,5 @@ import base from './base';
 
 export default {
   ...base,
-  appDomain: 'https://react-unsplash-clone.herokuapp.com'
+  appDomain: 'https://csr-react-unsplash-clone.herokuapp.com'
 }
