@@ -11,10 +11,10 @@ console.log(process.env, process.env.ENV);
 import './index.scss';
 import { BrowserRouter as Router } from 'react-router-dom';
 // @ts-ignore
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
+// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
 const store = createStore(rootReducer, compose(
-  applyMiddleware(reduxThunk),
-  composeEnhancers()
+  applyMiddleware(reduxThunk)
+//  composeEnhancers()
 ));
 
 ReactDOM.render(
