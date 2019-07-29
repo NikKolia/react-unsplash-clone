@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
-import { devToolsEnhancer } from 'redux-devtools-extension/logOnlyInProduction';
+import { devToolsEnhancer } from 'redux-devtools-extension';
 import reduxThunk from 'redux-thunk';
 import rootReducer from './store';
 import { App } from './App';
@@ -12,10 +12,8 @@ console.log(process.env, process.env.ENV);
 import './index.scss';
 import { BrowserRouter as Router } from 'react-router-dom';
 // @ts-ignore
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
 const store = createStore(rootReducer, compose(
   applyMiddleware(reduxThunk),
-  composeEnhancers(),
   devToolsEnhancer({
       features: {
           pause: true, // start/pause recording of dispatched actions
