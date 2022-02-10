@@ -22,7 +22,7 @@
     "express": "^4.16.4",
     "informed": "^2.1.9",
     "materialize-css": "^1.0.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
